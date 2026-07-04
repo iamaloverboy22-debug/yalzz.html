@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yalzz ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff8fb8,#ffd6e7);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:400px;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+text-align:center;
+position:relative;
+animation:pop .5s ease;
+}
+
+@keyframes pop{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+h1{
+color:#ff3b7a;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:#333;
+}
+
+button{
+margin-top:25px;
+padding:12px 28px;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:#ff3b7a;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+.heart{
+position:absolute;
+color:#ff3b7a;
+animation:float 6s linear infinite;
+opacity:.6;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="page1" class="page active">
+
+<h1>Hi Yalzz ❤️</h1>
+
+<p>
+
+Indha website-a open pannadhukku thanks. ❤️
+
+<br><br>
+
+Nee dhan enoda lucky charm pah! 💕
+
+<br><br>
+
+Nee vandhadhuku aprm dhan naan
+Sanchana-va marandhu
+unkuda sandhoshama irundhen.
+
+<br><br>
+
+Aana...
+
+namma sanda potadhum
+yen andha akka kitta pesunen nu
+enakke therla.
+
+<br><br>
+
+Adhukku manasaara sorry. 😔
+
+</p>
+
+<button onclick="nextPage(2)">Next ➜</button>
+
+</div>
+<div id="page2" class="page">
+
+<h1>Yalzz... ❤️</h1>
+
+<p>
+
+Naan panadhu thappu dhaan...
+Adha naan othukuren.
+
+<br><br>
+
+Inime andha thappa
+oru naalum repeat panna maten.
+
+<br><br>
+
+Un trust-ah dhaan
+en life-la romba mukkiyama paakuren.
+
+<br><br>
+
+Adha kandippa kaapathuven. 💯
+
+<br><br>
+
+Idhuku apram
+unnakitta poi solli
+unnai hurt panna maten.
+
+<br><br>
+
+Indha oru vaati
+enna nambu.
+
+<br><br>
+
+Enoda motha love-um,
+care-um,
+future-um...
+unakku dhaan. 🤌🏻💕❣️
+
+</p>
+
+<button onclick="nextPage(3)">Next ➜</button>
+
+</div>
+
+<div id="page3" class="page">
+
+<h1>One Last Thing... ❤️</h1>
+
+<p>
+
+Unna lose panna
+enakku viruppam illa.
+
+<br><br>
+
+Indha oru thadava
+enna mannichidu.
+
+<br><br>
+
+Thirumba enakku
+innoru chance kudu pahh.
+
+<br><br>
+
+Unakaga dhaan
+naan kathukitte iruken. 🤌🏻🫠
+
+<br><br>
+
+Please... ❤️
+
+</p>
+
+<h2 style="margin-top:20px;color:#ff3b7a;">
+Will You Give Me One More Chance
+<br>
+and Be My Girlfriend? 💍❤️
+</h2>
+
+<button onclick="yes()">YES 💖</button>
+
+<button id="noBtn">NO 😅</button>
+
+</div>
+</div>
+
+<script>
+
+function nextPage(page){
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active");
+});
+document.getElementById("page"+page).classList.add("active");
+}
+
+function yes(){
+
+document.body.innerHTML=`
+
+<div style="height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff8fb8,#ffd6e7);
+font-family:Arial;
+text-align:center;
+padding:20px;">
+
+<div>
+
+<h1 style="color:#ff3b7a;font-size:38px;">
+🥹❤️ Thank You Yalzz ❤️🥹
+</h1>
+
+<p style="font-size:22px;margin-top:20px;line-height:1.8;">
+
+You made me the happiest person. 💕
+
+<br><br>
+
+I Promise...
+
+I'll never break your trust again.
+
+🤞🏻❤️
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+const no=document.getElementById("noBtn");
+
+no.addEventListener("mouseover",()=>{
+
+no.style.position="absolute";
+no.style.left=Math.random()*70+"%";
+no.style.top=Math.random()*70+"%";
+
+});
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.animationDuration=(Math.random()*5+5)+"s";
+
+h.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+
+</html>
